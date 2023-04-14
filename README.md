@@ -1,4 +1,4 @@
-# metadata_arcpro
+# metadata_utils_arcpro
 To include tools for documenting data in arcgis data models - shapefiles, feature classes, etc.
 
 ## xml_module
@@ -17,7 +17,8 @@ Step 2 of the tool - described below
 - xml_module.pyt.xml
 
 ## INSTRUCTIONS `xml_module` Toolbox:</br>
-![tool screenshot](https://user-images.githubusercontent.com/48263393/231899594-991b3e9e-10ba-4aa3-8d1f-6e0892453573.jpg)
+![toolbox screenshot](https://user-images.githubusercontent.com/48263393/232112338-81a2b313-310c-4132-ac13-2c724ca30ea1.jpg)
+
 ### Access Tool the `xml_module.pyt` toolbox:**</br>
 - *Add* as a Python Toolbox in your ArcGIS Pro Catalog Toolbox dropdown</br></br>
 OR</br></br>
@@ -32,7 +33,7 @@ INPUTS:</BR>
 - `csv_directory`: This tool returns a csv itemizing the fields of fc_in. This parameter is the path/to/the/directory/to/house/csv.</br>
 - `csv_filename`:The filename of csv to be output. Can be <name_of_csv> or <name_of_csv>.csv.</br></br>
 
-![xml_module_step1](https://user-images.githubusercontent.com/48263393/232091015-69bb926e-d88d-45b5-885a-060defe3d08b.jpg)
+![xml_module_step1](https://user-images.githubusercontent.com/48263393/232112333-a144e80b-bf8f-4987-b22a-00e614d8b0b8.jpg)
 
 **RUN** --> Returns a csv (csv_directory/csv_filename) with the below structure.</br> 
 *Note that `attralias` will have values only if they are defined in the shapefile/FC.*</br>
@@ -55,7 +56,7 @@ INPUTS:</BR>
 - `processing_dir`: Output directory. Required argument, but only relevant for a feature class as this directory will house an intermediary xml file to be used in importing updated metadata to the feature class. </br>
 - `xml_csv`:path/to/populated/csv from previous step (step_1).</br></br>
 
-![xml_module_step2](https://user-images.githubusercontent.com/48263393/232091020-3b34c36d-0513-4f0d-9a7b-7c67c933228c.jpg)
+![xml_module_step2](https://user-images.githubusercontent.com/48263393/232112347-77e4a504-629f-4e24-b53c-63ae8121e0af.jpg)
 
 Prior to running tool, populate the blank columns - these values will be stamped into the metadata of target feature class or shapefile:</br>
 
@@ -74,7 +75,7 @@ Prior to running tool, populate the blank columns - these values will be stamped
 ### Resultant Metadata
 - *Note this is the intermediary xml created in step1, however the displayed portion is identical to the metadata created for the actual target FC or shapefile*</br>
 - This *attribute level* metatdata can now be viewed in the feature's `Item Desciption` in ArcGIS Pro, Dekstop, Catalog, etc.</br></br>
-![xml_module_xml_populated](https://user-images.githubusercontent.com/48263393/232091017-25fda8fd-ebe4-43fd-b492-1411dc1ce978.jpg)
+![xml_module_xml_populated](https://user-images.githubusercontent.com/48263393/232112343-0cbe2034-f577-4099-97b1-e863f47f7334.jpg)
 
 
 
